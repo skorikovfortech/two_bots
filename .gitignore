@@ -6,6 +6,9 @@
 __pycache__/
 *.pyc
 
-# Виртуальные окружения
-.venv/
-venv/
+telegram_bot_norifier/.venv/
+slack_bot_for_tg_notifiers/.venv/
+
+**/.venv/
+
+**/.vscode/
