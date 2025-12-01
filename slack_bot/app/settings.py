@@ -6,3 +6,5 @@ load_dotenv()
 
 SLACK_BOT_TOKEN = os.getenv("BOT_TOKEN")
 SLACK_CHANNEL = os.getenv("CHANNEL")
+kafkabootstrap = os.getenv("KAFKA_BOOTSTRAP")
+topic = os.getenv("TOPIC")

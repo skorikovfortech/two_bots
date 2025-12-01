@@ -5,7 +5,7 @@ from alembic import context
 
 from app.core.settings import sync_url
 from app.models import User, Messages
-from app.core.base import Base
+from app.models import Base
 
 from dotenv import load_dotenv
 import os

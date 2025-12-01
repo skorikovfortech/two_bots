@@ -1,9 +1,9 @@
 
 services:
   telegram_bot:
-    build: ./telegram_bot_norifier
+    build: ./telegram_bot
     env_file:
-      - ./telegram_bot_norifier/.env
+      - ./telegram_bot/.env
     depends_on:
       db:
         condition: service_healthy
@@ -13,9 +13,9 @@ services:
       - "8001:8001"
 
   slack_bot:
-    build: ./slack_bot_for_tg_notifiers
+    build: ./slack_bot
     env_file:
-      - ./slack_bot_for_tg_notifiers/.env
+      - ./slack_bot/.env
     depends_on:
       kafka:
         condition: service_started

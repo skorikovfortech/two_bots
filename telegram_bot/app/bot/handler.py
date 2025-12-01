@@ -1,6 +1,6 @@
 from aiogram.filters import CommandStart
 from aiogram.types import Message
-from app.bot.producer import send_to_kafka
+from app.bot.producer import producer
 from app.core.settings import logger
 from aiogram import Dispatcher
 from app.bot.queries import add_user, get_user, save_messages
@@ -44,5 +44,5 @@ async def handle_message(message: Message):
         return
     await save_messages(user.id, text)
     logger.info(f"Сообщение от {user.username} (tg_id={user_tg_id}): {text}")
-    await send_to_kafka({"user_id": user.id, "username": user.username, "text": text})
+    await producer.send({"user_id": user.id, "username": user.username, "text": text})
     await message.answer(f"Ваше сообщение успешно сохранилось")
