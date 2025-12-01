@@ -24,7 +24,7 @@ async def command_start_handler(message: Message):
         logger.info(f"Новый пользователь: {chat_username} (tg_id={user_tg_id})")
 
     await message.answer(
-        f"Привет, {message.from_user.first_name}! Напиши мне сообщение что бы я его сохранил и отправил в Slack"
+        f"Привет! Напиши мне сообщение что бы я его сохранил и отправил в Slack"
     )
 
 

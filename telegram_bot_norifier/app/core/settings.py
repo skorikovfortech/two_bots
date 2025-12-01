@@ -10,6 +10,8 @@ postgres_password = os.getenv("POSTGRES_PASSWORD")
 db_host = os.getenv("DB_HOST")
 db_port = os.getenv("DB_PORT")
 db_name = os.getenv("DB_NAME")
+kafka_bootstrap = os.getenv("KAFKA_BOOTSTRAP")
+topic_name = os.getenv("TOPIC_NAME")
 
 async_url = (
     f"{db_protocol}://{postgres_user}:{postgres_password}@{db_host}:{db_port}/{db_name}"
